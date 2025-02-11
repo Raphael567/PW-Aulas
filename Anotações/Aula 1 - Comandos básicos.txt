@@ -1,0 +1,2 @@
+Criar projeto - ng new pw3-bindings
+Rodar - ng serve -o
