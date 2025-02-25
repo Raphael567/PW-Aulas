@@ -1,3 +1,6 @@
+//Raphael Pereira Canuto
+//Hellen Novi Salvador
+
 import { Component } from '@angular/core';
 
 @Component({
