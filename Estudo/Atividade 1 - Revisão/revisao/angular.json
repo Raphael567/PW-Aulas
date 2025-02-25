@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "pw3-bindings": {
+    "revisao": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/pw3-bindings",
+            "outputPath": "dist/revisao",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -59,10 +59,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "pw3-bindings:build:production"
+              "buildTarget": "revisao:build:production"
             },
             "development": {
-              "buildTarget": "pw3-bindings:build:development"
+              "buildTarget": "revisao:build:development"
             }
           },
           "defaultConfiguration": "development"

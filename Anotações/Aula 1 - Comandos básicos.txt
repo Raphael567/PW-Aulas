@@ -1,2 +1,3 @@
+Instalar Angular - npm install -g @angular/cli
 Criar projeto - ng new pw3-bindings
 Rodar - ng serve -o
