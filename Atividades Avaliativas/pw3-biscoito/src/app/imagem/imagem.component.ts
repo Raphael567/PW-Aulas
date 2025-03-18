@@ -9,14 +9,10 @@ import { Component, input, Input, OnInit } from '@angular/core';
   styleUrls: ['./imagem.component.css']
 })
 export class ImagemComponent {
-  @Input() imagem = 'biscoito.ico'
+  imagem = 'biscoito.ico';
   @Input() quebrado: boolean = true; 
 
   trocarImagem() {
-    if (this.imagem === 'biscoito.ico') {
-      this.imagem = 'biscoito-aberto.ico';
-    } else {
-      this.imagem = 'biscoito.ico';
-    }
+    this.imagem = this.imagem === 'biscoito.ico' ? 'biscoito-aberto.ico' : 'biscoito.ico';
   }
 }
