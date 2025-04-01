@@ -11,7 +11,6 @@ import { FrasesComponent } from '../frases/frases.component';
   styleUrl: './biscoito.component.css'
 })
 export class BiscoitoComponent {
-
   imagemSrc: string = 'biscoito.ico';
   frase: string = '';
   biscoitoQuebrado: boolean = false;
@@ -24,6 +23,6 @@ export class BiscoitoComponent {
   reiniciarBiscoito() {
     this.biscoitoQuebrado = false;
     this.imagemSrc = 'biscoito.ico';
-    this.frase = ''
+    this.frase = '';
   }
 }

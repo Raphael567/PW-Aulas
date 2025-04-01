@@ -37,7 +37,7 @@ export class FrasesComponent {
   fraseExibida: string = '';
   @Input() exibirFrase: boolean = false;
 
-  constructor() {
-    this.fraseExibida = this.frasesBiscoito[Math.floor(Math.random() * this.frasesBiscoito.length)];
+  Frase() {
+    return this.frasesBiscoito[Math.floor(Math.random() * this.frasesBiscoito.length)];
   }
 }
