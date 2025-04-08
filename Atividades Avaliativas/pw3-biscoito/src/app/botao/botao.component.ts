@@ -8,6 +8,6 @@ import { Component, Input, input } from '@angular/core';
 })
 export class BotaoComponent {
   @Input() texto: string = 'Quebrar biscoito';
-  @Input() classe: string = 'botao';
+  @Input() classe: string = '';
   @Input() desabilitado: boolean = false;
 }

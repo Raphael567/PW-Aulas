@@ -14,15 +14,18 @@ export class BiscoitoComponent {
   imagemSrc: string = 'biscoito.ico';
   frase: string = '';
   biscoitoQuebrado: boolean = false;
+  desabilitado: boolean = false;
 
   quebrarBiscoito() {
     this.biscoitoQuebrado = true;
     this.imagemSrc = 'biscoito-aberto.ico';
+    this.desabilitado = false;
   }
 
   reiniciarBiscoito() {
     this.biscoitoQuebrado = false;
     this.imagemSrc = 'biscoito.ico';
     this.frase = '';
+    this.desabilitado = true;
   }
 }

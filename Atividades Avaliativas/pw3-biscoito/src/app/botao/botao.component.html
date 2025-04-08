@@ -1,1 +1,1 @@
-<button [class]="classe" [disabled]="desabilitado">{{ texto }}</button>
+<button [class]="classe ? 'botao' : 'botao secundario'" [disabled]="desabilitado">{{ texto }}</button>
