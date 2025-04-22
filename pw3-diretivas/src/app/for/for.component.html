@@ -1,0 +1,41 @@
+@for (item of professores; track $index) {
+  <li>
+    {{$index+1}} - {{item}}
+    <button (click)="remover($index)">Remover</button>
+  </li>
+}
+
+<!-- @if (mostrar_tarefas) {
+  @for (tarefa of lista_tarefas; track $index) {
+    @if (mostrar_outro_botao) {
+      @if(tarefa.concluida) {
+        <li>{{tarefa.id}} - {{tarefa.nome}} - {{"Concluída"}}</li>
+      }@else {
+        <li>{{tarefa.id}} - {{tarefa.nome}}</li>
+      }
+    }
+    @else if (tarefa.concluida) {
+      <li>{{tarefa.id}} - {{tarefa.nome}} - {{"Concluída"}}</li>
+    }
+  }
+}
+@if (!mostrar_outro_botao) {
+  <button (click)="exibir_tarefas()">Exibir tudo</button>
+} @else {
+  <button (click)="exibir_concluidas()">Exibir só concluídas</button>
+} -->
+
+@if (mostrar_tarefas) {
+  @for(tarefa of lista_tarefas; track tarefa.id) {
+    <li>
+      @if (!mostrar_outro_botao) {
+        {{tarefa.id}} - {{tarefa.nome}}
+      } @else {
+        {{tarefa.id}} - {{tarefa.nome}}
+      }
+    </li>
+  }
+}
+
+<button (click)="exibir_tarefas()" [hidden]="mostrar_outro_botao">Exibir tudo</button>
+<button (click)="exibir_concluidas()" [hidden]="!mostrar_outro_botao">Exibir só concluídas</button>
