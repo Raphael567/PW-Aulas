@@ -25,17 +25,14 @@
   <button (click)="exibir_concluidas()">Exibir só concluídas</button>
 } -->
 
-@if (mostrar_tarefas) {
-  @for(tarefa of lista_tarefas; track tarefa.id) {
-    <li>
-      @if (!mostrar_outro_botao) {
-        {{tarefa.id}} - {{tarefa.nome}}
-      } @else {
-        {{tarefa.id}} - {{tarefa.nome}}
-      }
-    </li>
+<button (click)="onExibirTudo()">{{exibirTudo ? 'Mostrar apenas concluídas' : 'Mostrar todas as tarefas'}}</button>
+
+@for(tarefa of lista_tarefas; track tarefa.id) {
+  @if( exibirTudo || tarefa.concluida) {
+    <p>{{tarefa.id}} - {{tarefa.nome}} <span>{{tarefa.concluida && !exibirTudo? '- Concluída' : ''}}</span></p>
   }
 }
 
-<button (click)="exibir_tarefas()" [hidden]="mostrar_outro_botao">Exibir tudo</button>
-<button (click)="exibir_concluidas()" [hidden]="!mostrar_outro_botao">Exibir só concluídas</button>
+@if(!exibirTudo && getConcluidas().length == 0){
+  <p>Não há tarefas concluídas</p>
+}

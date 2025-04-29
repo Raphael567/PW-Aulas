@@ -35,24 +35,15 @@ export class ForComponent {
   //   this.mostrar_outro_botao = !this.mostrar_outro_botao;
   // }
 
-  mostrar_outro_botao: boolean = false;
-  mostrar_tarefas: boolean = false;
+  exibirTudo: boolean = false;
 
-  tarefas_para_exbir() {
-    if(this.mostrar_outro_botao) {
-      this.exibir_tarefas();
-    } else {
-      this.exibir_concluidas();
-    }
+  onExibirTudo() {
+    this.exibirTudo = !this.exibirTudo;
   }
 
-  exibir_tarefas() {
-    this.mostrar_tarefas = true;
-    this.mostrar_outro_botao = !this.mostrar_outro_botao;
-  }
-
-  exibir_concluidas() {
-    this.mostrar_tarefas = false;
-    this.mostrar_outro_botao = !this.mostrar_outro_botao;
+  getConcluidas(){
+    return this.lista_tarefas.filter((item) => {
+      return item.concluida;
+    })
   }
 }

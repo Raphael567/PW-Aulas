@@ -1,0 +1,14 @@
+.fundo {
+  background-color: yellow;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  padding: 20px;
+  width: 250px;
+  height: 250px;
+}
+
+.titulo {
+  font-size: large;
+}

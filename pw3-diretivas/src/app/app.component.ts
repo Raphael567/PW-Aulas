@@ -3,10 +3,13 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { IfComponent } from './if/if.component';
 import { SwitchComponent } from './switch/switch.component';
+import { NgComponentOutlet } from '@angular/common';
+import { NgcontentComponent } from "./ngcontent/ngcontent.component";
+import { CardComponent } from "./card/card.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, IfComponent, SwitchComponent, ForComponent],
+  imports: [RouterOutlet, IfComponent, SwitchComponent, ForComponent, NgcontentComponent, CardComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
