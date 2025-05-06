@@ -1,0 +1,12 @@
+<form [formGroup]="calculadoraForm">
+  <label for="num1">Número 1: </label>
+  <input type="number" id="num1" formControlName="num1">
+  <br>
+  <label for="num1">Número 2: </label>
+  <input type="number" id="num2" formControlName="num2">
+  <br>
+</form>
+
+<button (click)="onCalcular()" type="button">Calcular</button>
+
+<p>Resultado: {{resultado}}</p>
