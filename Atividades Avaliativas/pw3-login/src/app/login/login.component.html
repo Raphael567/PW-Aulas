@@ -1,0 +1,17 @@
+<div class="login-container" [hidden]="escondeInputs">
+    <h1>Login</h1>
+    <div>
+        <form [formGroup]="loginForm">
+            <div>
+                <label for="username">Usuário</label>
+                <input type="text" id="username" formControlName="username">
+            </div>
+            <div>
+                <label for="password">Senha</label>
+                <input type="password" id="password" formControlName="password">
+            </div>
+        </form>
+        <button type="button" (click)="onLogin()">Autenticar</button>
+    </div>
+</div>
+<p [class]="escondeInputs ? 'valido' : 'invalido'" [hidden]="escondeTexto">{{ texto }}</p>
